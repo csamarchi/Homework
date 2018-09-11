@@ -23,3 +23,12 @@ git checkout
 
 #Why might you want to reset your files back to a previous commit?
 because you forgot to add something or didn't want to commit just yet
+
+#What command do you use to create a branch?
+git checkout -b [name_of_your_new_branch]
+
+#What command do you use to use a different branch?
+git checkout [name_of_your_new_branch]
+
+#Why would you want to use a branch other than the default master?
+we treat the master as our production and therefore need to create a single branch for development, or pre-production
