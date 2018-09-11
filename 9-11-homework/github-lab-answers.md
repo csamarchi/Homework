@@ -31,4 +31,10 @@ git checkout -b [name_of_your_new_branch]
 git checkout [name_of_your_new_branch]
 
 #Why would you want to use a branch other than the default master?
-we treat the master as our production and therefore need to create a single branch for development, or pre-production
+we treat the master as our production(final piece) and therefore need to create a single branch for development, or pre-production. so we avoid any errors on the original final piece
+
+#Give an example for when you would use git merge and give an example for when it would be better to submit a pull request to have your branch merged
+if you have made a change to your fork that you want to be integrated into the original repo, you'll have to ask the original repo owner to review and merge your changes into theirs. Both are means of pulling changes from another branch or fork into your branch and merging the changes with your existing code.
+
+#What command do you use to send all of the work that you've done locally to your remote repository?
+git push [remote_name] [branch_name]
