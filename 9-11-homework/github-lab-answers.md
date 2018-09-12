@@ -37,4 +37,4 @@ we treat the master as our production(final piece) and therefore need to create 
 if you have made a change to your fork that you want to be integrated into the original repo, you'll have to ask the original repo owner to review and merge your changes into theirs. Both are means of pulling changes from another branch or fork into your branch and merging the changes with your existing code.
 
 #What command do you use to send all of the work that you've done locally to your remote repository?
-git push [remote_name] [branch_name]
+git push origin master
