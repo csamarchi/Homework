@@ -11,8 +11,13 @@ h3 {
 }
 
 body {
-  padding: 40px 40px 40px 40px;
-  margin: 50px 60px;
+  font-size: 1.8rem;
+  line-height: 1.618;
+  max-width: 38em;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
 }
 
 img {
@@ -24,4 +29,29 @@ width: 40%;
 
 a {
   text-decoration: none;
+  float: left;
+  font-size: 17px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto;
+  }
+
+ol {
+  list-style-type: none;
+  float: left;
+  margin: 10;
+  padding: 100;
+  width: 25%;
+  height: 50%;
+  position: fixed;
+  overflow: auto;
 }
