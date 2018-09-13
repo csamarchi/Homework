@@ -49,28 +49,39 @@ const reuben = ["Reuben", 22, "Durham"];
 const daniel = ["Daniel", 186, "Dallas"];
 const ryan = ["Ryan", 65, "Denver"];
 
+// //1.
+// shahzad[0] = "Gameboy";
+// console.log(shahzad);
+//
+// //2.
+// daniel[1] += 1;
+// console.log(daniel);
+//
+// //3.
+// ryan[2] = "Gotham City";
+// console.log(ryan);
+//
+// //4.
+// reuben.pop("Durham");
+// reuben.push("Chicago");
+// console.log(reuben);
+//
+// //5.
+// jim.pop("All Cities");
+// jim.push("Austin", "Atlanta", "Los Angeles");
+// console.log(jim);
+//
+// //6.
+// jim.splice(2, 1);
+// console.log(jim);
+
+
+//Yell at the Ninja Turtles
+
 //1.
-shahzad[0] = "Gameboy";
-console.log(shahzad);
+let array = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
 
 //2.
-daniel[1] += 1;
-console.log(daniel);
-
-//3.
-ryan[2] = "Gotham City";
-console.log(ryan);
-
-//4.
-reuben.pop("Durham");
-reuben.push("Chicago");
-console.log(reuben);
-
-//5.
-jim.pop("All Cities");
-jim.push("Austin", "Atlanta", "Los Angeles");
-console.log(jim);
-
-//6.
-jim.splice(2, 1);
-console.log(jim);
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i].toUpperCase());
+  }
