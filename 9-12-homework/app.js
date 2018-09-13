@@ -56,7 +56,7 @@ const ryan = ["Ryan", 65, "Denver"];
 // //2.
 // daniel[1] += 1;
 // console.log(daniel);
-//
+
 // //3.
 // ryan[2] = "Gotham City";
 // console.log(ryan);
@@ -79,9 +79,11 @@ const ryan = ["Ryan", 65, "Denver"];
 //Yell at the Ninja Turtles
 
 //1.
-let array = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+// let array = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo'];
+//
+// //2.
+//   for (let i = 0; i < array.length; i++) {
+//     console.log(array[i].toUpperCase());
+//   }
 
-//2.
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i].toUpperCase());
-  }
+//Return of the Closets
