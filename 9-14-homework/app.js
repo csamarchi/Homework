@@ -20,4 +20,20 @@
   //6. What percentage of time should be spent thinking
   //about how you're going to solve a problem vs actually
   //typing in code to solve it?
-//80% planning and thinking it out. 20% coding it 
+//80% planning and thinking it out. 20% coding it
+
+
+//B. Strings
+//1. Create a variable called firstVariable.
+var firstVariable = 'Hello World';
+var firstVariable = 5;
+var firstVariable, secondVariable = '5';
+var secondVariable = 'anything';
+console.log(secondVariable);
+
+
+//2.
+let yourName = 'Christine';
+
+const greeting = ('Hello, my name is ' + yourName);
+console.log(greeting);
