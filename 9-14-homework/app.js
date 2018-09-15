@@ -59,11 +59,34 @@
 // //console.log(a * a = d);
 // console.log(48 == '48');
 
+//
+// //D. The farm
+// let animal = 'pig';
+//
+//   if (animal === 'cow') {
+//     console.log('moo');
+//   } else (animal !== 'cow')
+//     console.log('this is not a cow');
 
-//D. The farm
-let animal = 'pig';
 
-  if (animal === 'cow') {
-    console.log('moo');
-  } else (animal !== 'cow')
-    console.log('this is not a cow');
+//E. Driver's Ed
+// let age = 20;
+//
+// if (age >= 16) {
+//   console.log('Here are the keys');
+// } else (age < 16)
+//   console.log("Sorry you're too young")
+//
+// //II.Loops
+//
+// for (let i = 0; i <= 10; i++) {
+//   console.log(i);
+// }
+
+// for (let i = 10; i <=400; i++) {
+//   console.log(i);
+// }
+//
+for (let i = 12; i <100;i = i+3) {
+  console.log(i);
+}
