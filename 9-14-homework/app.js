@@ -25,15 +25,45 @@
 
 //B. Strings
 //1. Create a variable called firstVariable.
-var firstVariable = 'Hello World';
-var firstVariable = 5;
-var firstVariable, secondVariable = '5';
-var secondVariable = 'anything';
-console.log(secondVariable);
+// var firstVariable = 'Hello World';
+// var firstVariable = 5;
+// var firstVariable, secondVariable = '5';
+// var secondVariable = 'anything';
+// console.log(secondVariable);
+//
+//
+// //2.
+// let yourName = 'Christine';
+//
+// const greeting = ('Hello, my name is ' + yourName);
+// console.log(greeting);
+//
 
 
-//2.
-let yourName = 'Christine';
+// C. Booleans
 
-const greeting = ('Hello, my name is ' + yourName);
-console.log(greeting);
+// const a = 4;
+// const b = 53;
+// const c = 57;
+// const d = 16;
+// const e = 'Kevin';
+//
+// console.log(a < b);
+// console.log(c > d);
+// console.log('Name' === 'Name');
+// // console.log(true != false);
+// // console.log(false = false = false = false = false = false != true);
+// // console.log(false = false)
+// console.log(e < 'Kevin');
+// //console.log(a + b = c);
+// //console.log(a * a = d);
+// console.log(48 == '48');
+
+
+//D. The farm
+let animal = 'pig';
+
+  if (animal === 'cow') {
+    console.log('moo');
+  } else (animal !== 'cow')
+    console.log('this is not a cow');
