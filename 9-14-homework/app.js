@@ -316,8 +316,30 @@
 // console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 
 // G. maxOfThree
+//
+// const maxOfThree = (num1, num2, num3) => {
+//   return Math.max(num1, num2, num3)
+// }
+// console.log(maxOfThree(6, 8, 9));
 
-const maxOfThree = (num1, num2, num3) => {
-  return Math.max(num1, num2, num3)
+//H. printLongestWord
+
+// const printLongestWord = (longest) => {
+//   let max = longest[0].length;
+//   longest.map(v => max = Math.max(max, v.length));
+//   result = longest.filter(v => v.length == max);
+//   return result;
+// }
+//
+// console.log(printLongestWord(["BoJack", "Princess",
+//                               "Diane", "a", "Max",
+//                               "Peanutbutter", "big", "Todd"]));
+
+//I. transmogrify
+
+const transmogrify = (a, b, c) => {
+  let result = Math.pow((a * b), 2);
+  return result
 }
-console.log(maxOfThree(6, 8, 9));
+
+console.log(transmogrify(5, 3, 2));
