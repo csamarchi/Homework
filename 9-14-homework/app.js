@@ -65,8 +65,10 @@
 //
 //   if (animal === 'cow') {
 //     console.log('moo');
-//   } else (animal !== 'cow')
-//     console.log('this is not a cow');
+//   } else {
+//       (animal !== 'cow')
+// //     console.log('this is not a cow');
+// }
 
 
 //E. Driver's Ed
@@ -74,9 +76,11 @@
 //
 // if (age >= 16) {
 //   console.log('Here are the keys');
-// } else (age < 16)
+// } else {
+//   (age < 16)
 //   console.log("Sorry you're too young")
-//
+// }
+
 // //II.Loops
 //
 // for (let i = 0; i <= 10; i++) {
@@ -170,13 +174,24 @@
 
 //E. Mix it up
 
-const myArray = [5, 10, 500, 20];
-
-let egon = myArray.push("Egon", "Christine");
-let remove = myArray.shift();
-let addon = myArray.unshift('Bob Marley');
-let remove2 = myArray.pop();
-let reverse = myArray.reverse();
-console.log(myArray);
+// const myArray = [5, 10, 500, 20];
+//
+// let egon = myArray.push("Egon", "Christine");
+// let remove = myArray.shift();
+// let addon = myArray.unshift('Bob Marley');
+// let remove2 = myArray.pop();
+// let reverse = myArray.reverse();
+// console.log(myArray);
 //mutate means to change the array without making a new Array
 //the reverse() method returned the reverse order of the Array
+
+//F. Biggie Smalls
+
+let n = 100;
+
+if (n < 100) {
+  console.log('little number');
+} else {
+  (n >= 100)
+  console.log('big number');
+}
