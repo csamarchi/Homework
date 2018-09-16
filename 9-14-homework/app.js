@@ -345,11 +345,38 @@
 // console.log(transmogrify(5, 3, 2));
 
 //J. reverseWordOrder
+//
+// const reverseWordOrder = (word) => {
+//   let array = word.split(' ').reverse('').join(' ');
+//   console.log(array);
+// }
+//
+// console.log(reverseWordOrder("Ishmael me Call"));
+// console.log(reverseWordOrder("I use Lâncome on my comb"));
 
-const reverseWordOrder = (word) => {
-  let array = word.split(' ').reverse('').join(' ');
-  console.log(array);
+//K.Get down and dirty with Math.random()
+// const randomInt = (min, max) => {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min)) + min;
+// }
+// console.log(randomInt(1, 10));
+//
+// const random = (min, max) => {
+//   return Math.random() * (max - min) + min;
+// }
+//
+// console.log(random(532, 13267));
+
+
+let quotes = ['Luke I am your father',
+              'Say hello to my little friend',
+              'Take the cannoli and leave',
+              'im a real boy', 'come on barbie lets go party'];
+
+const getRandomElement = (quotes) => {
+  //let randomQuote = getRandomElement[Math.floor(Math.random() * quotes.length)]
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-console.log(reverseWordOrder("Ishmael me Call"));
-console.log(reverseWordOrder("I use Lâncome on my comb"));
+console.log(getRandomElement(quotes));
