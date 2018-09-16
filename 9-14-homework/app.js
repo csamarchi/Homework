@@ -274,11 +274,27 @@
 //
 // console.log(printCool('Captain Reynolds'));
 
-//C. calculateCube
-let n = (5);
+// //C. calculateCube
+// let n = (5);
+//
+// const calculateCube = () => {
+//   return (n * n * n);
+// }
+//
+// console.log(calculateCube(5));
 
-const calculateCube = () => {
-  return (n * n * n);
+//D. isVowel
+//Write a function isVowel that takes a character
+//(i.e. a string of length 1) and returns true if it is a
+//vowel, false otherwise. The vowel could be upper or
+//lower case.
+
+const isVowel = (x) => {
+  if (x === 'a'|| x === 'e' || x === 'i'|| x === '0' || x === 'u') {
+    return true
+  } else {
+    return false;
+  }
 }
 
-console.log(calculateCube(5));
+console.log(isVowel('u'));
