@@ -289,12 +289,20 @@
 //vowel, false otherwise. The vowel could be upper or
 //lower case.
 
-const isVowel = (x) => {
-  if (x === 'a'|| x === 'e' || x === 'i'|| x === '0' || x === 'u') {
-    return true
-  } else {
-    return false;
-  }
+// const isVowel = (x) => {
+//   if (x === 'a'|| x === 'e' || x === 'i'|| x === '0' || x === 'u') {
+//     return true
+//   } else {
+//     return false;
+//   }
+// }
+//
+// console.log(isVowel('u'));
+
+//E. getTwoLengths
+
+const getTwoLengths = (var1, var2) => {
+  return [var1.length, var2.length];
 }
 
-console.log(isVowel('u'));
+console.log(getTwoLengths('hank', 'hippopatamus'));
