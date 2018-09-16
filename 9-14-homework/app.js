@@ -266,6 +266,19 @@
 //
 // console.log(printGreeting('Slimer'));
 
-const printCool = () => {
+//B. printCool
 
+// const printCool = (name) => {
+//   return (name + ' is cool');
+// }
+//
+// console.log(printCool('Captain Reynolds'));
+
+//C. calculateCube
+let n = (5);
+
+const calculateCube = () => {
+  return (n * n * n);
 }
+
+console.log(calculateCube(5));
