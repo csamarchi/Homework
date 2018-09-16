@@ -301,8 +301,23 @@
 
 //E. getTwoLengths
 
-const getTwoLengths = (var1, var2) => {
-  return [var1.length, var2.length];
-}
+// const getTwoLengths = (var1, var2) => {
+//   return [var1.length, var2.length];
+// }
+//
+// console.log(getTwoLengths('hank', 'hippopatamus'));
 
-console.log(getTwoLengths('hank', 'hippopatamus'));
+//F. getMultipleLengths
+
+// const getMultipleLengths = ([x, b, c, d, e]) => {
+//   return [x.length, b.length, c.length, d.length, e.length];
+// }
+//
+// console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+
+// G. maxOfThree
+
+const maxOfThree = (num1, num2, num3) => {
+  return Math.max(num1, num2, num3)
+}
+console.log(maxOfThree(6, 8, 9));
