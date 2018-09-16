@@ -337,9 +337,19 @@
 
 //I. transmogrify
 
-const transmogrify = (a, b, c) => {
-  let result = Math.pow((a * b), 2);
-  return result
+// const transmogrify = (a, b, c) => {
+//   let result = Math.pow((a * b), 2);
+//   return result
+// }
+//
+// console.log(transmogrify(5, 3, 2));
+
+//J. reverseWordOrder
+
+const reverseWordOrder = (word) => {
+  let array = word.split(' ').reverse('').join(' ');
+  console.log(array);
 }
 
-console.log(transmogrify(5, 3, 2));
+console.log(reverseWordOrder("Ishmael me Call"));
+console.log(reverseWordOrder("I use Lâncome on my comb"));
