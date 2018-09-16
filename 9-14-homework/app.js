@@ -100,11 +100,32 @@
 //   }
 // }
 
-for (let i = 0; i <= 100; i++) {
-  if (i % 5 === 0) {
-    console.log('I found a ' + i + '. High five!');
-  } else if (i % 3 === 0) {
-    console.log('I found a ' + i + '. Three is a crowd.');
-  }
+// for (let i = 0; i <= 100; i++) {
+//   if (i % 5 === 0) {
+//     console.log('I found a ' + i + '. High five!');
+//   } else if (i % 3 === 0) {
+//     console.log('I found a ' + i + '. Three is a crowd.');
+//   }
+// }
 
+//D. Savings account
+
+//let bank_account = 0;
+// let bank_account = 0;
+// for (let i = 0; i <= 100; i++) {
+//   bank_account = (bank_account + i);
+//   bonus = bank_account * 2;
+// }
+// console.log(bonus);
+
+
+//E. Multiples of 3 and 5
+
+let sum = 0;
+
+for (let i = 1; i < 1000; i++) {
+  if (i % 3 === 0 || i % 5 ===0) {
+    sum = sum + i;
+  }
 }
+console.log(sum);
