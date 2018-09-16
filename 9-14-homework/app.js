@@ -129,3 +129,14 @@ for (let i = 1; i < 1000; i++) {
   }
 }
 console.log(sum);
+
+//III. Arrays & Control flow
+
+//A. Talk about it
+//1. What are the things in an array called?
+//objects
+//2. Do Arrays guarantee those things will be in order?
+//yes it keeps it in order frmo 0 - array.length -1
+//3. What real-life thing could you model with an array?
+//listing all the properties of a clothing item in an
+//online shopping website. list the sizes, colors, etc.
