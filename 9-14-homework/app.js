@@ -159,11 +159,24 @@
 
 //D. Change values
 
-const ourClass = ["Salty", "Zoom", "Sardine",
-                  "Slack", "Github"];
+// const ourClass = ["Salty", "Zoom", "Sardine",
+//                   "Slack", "Github"];
+//
+// let third = ourClass[3];
+// let last = ourClass.pop()
+// let add = ourClass.push("Octocat");
+// let pool = ourClass.push("Cloud City");
+// console.log(ourClass);
 
-let third = ourClass[3];
-let last = ourClass.pop()
-let add = ourClass.push("Octocat");
-let pool = ourClass.push("Cloud City");
-console.log(ourClass);
+//E. Mix it up
+
+const myArray = [5, 10, 500, 20];
+
+let egon = myArray.push("Egon", "Christine");
+let remove = myArray.shift();
+let addon = myArray.unshift('Bob Marley');
+let remove2 = myArray.pop();
+let reverse = myArray.reverse();
+console.log(myArray);
+//mutate means to change the array without making a new Array
+//the reverse() method returned the reverse order of the Array
