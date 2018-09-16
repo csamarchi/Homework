@@ -210,36 +210,36 @@
 
 //H. What's in Your Closet
 
-const kristynsCloset = [
-  "left shoe",
-  "cowboy boots",
-  "right sock",
-  "GA hoodie",
-  "green pants",
-  "yellow knit hat",
-  "marshmallow peeps"
-];
-
-// Thom's closet is more complicated. Check out this nested data structure!!
-const thomsCloset = [
-  [
-    // These are Thom's shirts
-    "grey button-up",
-    "dark grey button-up",
-    "light blue button-up",
-    "blue button-up",
-  ],[
-    // These are Thom's pants
-    "grey jeans",
-    "jeans",
-    "PJs"
-  ],[
-    // Thom's accessories
-    "wool mittens",
-    "wool scarf",
-    "raybans"
-  ]
-];
+// const kristynsCloset = [
+//   "left shoe",
+//   "cowboy boots",
+//   "right sock",
+//   "GA hoodie",
+//   "green pants",
+//   "yellow knit hat",
+//   "marshmallow peeps"
+// ];
+//
+// // Thom's closet is more complicated. Check out this nested data structure!!
+// const thomsCloset = [
+//   [
+//     // These are Thom's shirts
+//     "grey button-up",
+//     "dark grey button-up",
+//     "light blue button-up",
+//     "blue button-up",
+//   ],[
+//     // These are Thom's pants
+//     "grey jeans",
+//     "jeans",
+//     "PJs"
+//   ],[
+//     // Thom's accessories
+//     "wool mittens",
+//     "wool scarf",
+//     "raybans"
+//   ]
+// ];
 
 //console.log('Krystyn is rocking that ' + kristynsCloset[3] + ' today!');
 //
@@ -252,5 +252,20 @@ const thomsCloset = [
 //console.log('Thom is looking fierce in a ' + thomsCloset[0][0] + ', ' +
             // thomsCloset[1][1] + ', ' + 'and ' +
             // thomsCloset[2][1]);
-thomsCloset[1][2] = 'Footie pajamas';
-console.log(thomsCloset[1]);
+// thomsCloset[1][2] = 'Footie pajamas';
+// console.log(thomsCloset[1]);
+
+
+//IV. Functions
+
+//A. printGreeting
+
+// const printGreeting = (name) => {
+//   return ('Hello, there ' + name);
+// }
+//
+// console.log(printGreeting('Slimer'));
+
+const printCool = () => {
+
+}
