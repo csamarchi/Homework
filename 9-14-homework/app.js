@@ -149,10 +149,21 @@
 
 //c. Accessing elements
 
-const randomThings = [1, 10, "Hello", true];
+// const randomThings = [1, 10, "Hello", true];
+//
+// let first =randomThings[0];
+// console.log(first);
+//
+// randomThings[2] = "World";
+// console.log(randomThings);
 
-let first =randomThings[0];
-console.log(first);
+//D. Change values
 
-randomThings[2] = "World";
-console.log(randomThings);
+const ourClass = ["Salty", "Zoom", "Sardine",
+                  "Slack", "Github"];
+
+let third = ourClass[3];
+let last = ourClass.pop()
+let add = ourClass.push("Octocat");
+let pool = ourClass.push("Cloud City");
+console.log(ourClass);
