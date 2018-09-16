@@ -140,3 +140,11 @@ console.log(sum);
 //3. What real-life thing could you model with an array?
 //listing all the properties of a clothing item in an
 //online shopping website. list the sizes, colors, etc.
+
+//B. Easy Does it
+
+let quotes = ['Luke I am your father',
+              'Say hello to my little friend',
+              'Take the cannoli and leave'];
+
+              
