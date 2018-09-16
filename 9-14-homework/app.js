@@ -187,11 +187,22 @@
 
 //F. Biggie Smalls
 
-let n = 100;
+// let n = 100;
+//
+// if (n < 100) {
+//   console.log('little number');
+// } else {
+//   (n >= 100)
+//   console.log('big number');
+// }
 
-if (n < 100) {
+
+//G. Monkey in the Middle
+let n = 7;
+
+if (n < 5) {
   console.log('little number');
-} else {
-  (n >= 100)
+} else if (n > 10)
   console.log('big number');
-}
+ else
+  console.log('monkey');
