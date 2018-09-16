@@ -121,14 +121,14 @@
 
 //E. Multiples of 3 and 5
 
-let sum = 0;
-
-for (let i = 1; i < 1000; i++) {
-  if (i % 3 === 0 || i % 5 ===0) {
-    sum = sum + i;
-  }
-}
-console.log(sum);
+// let sum = 0;
+//
+// for (let i = 1; i < 1000; i++) {
+//   if (i % 3 === 0 || i % 5 ===0) {
+//     sum = sum + i;
+//   }
+// }
+// console.log(sum);
 
 //III. Arrays & Control flow
 
@@ -143,8 +143,16 @@ console.log(sum);
 
 //B. Easy Does it
 
-let quotes = ['Luke I am your father',
-              'Say hello to my little friend',
-              'Take the cannoli and leave'];
+// let quotes = ['Luke I am your father',
+//               'Say hello to my little friend',
+//               'Take the cannoli and leave'];
 
-              
+//c. Accessing elements
+
+const randomThings = [1, 10, "Hello", true];
+
+let first =randomThings[0];
+console.log(first);
+
+randomThings[2] = "World";
+console.log(randomThings);
