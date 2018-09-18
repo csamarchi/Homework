@@ -128,4 +128,12 @@ const bondTitles = {};
 for (let key in bondFilms) {
   bondTitles[bondFilms[key].title] = bondTitles;
 }
-console.log(bondTitles);
+//console.log(bondTitles);
+
+const oddBonds = {};
+
+for (let i = 0; i <= bondFilms.length; i++) {
+  if (bondFilms[i].year % 2 !== 0) {
+    console.log(bondFilms[i].year + ' is odd')
+  }
+}
