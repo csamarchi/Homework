@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+const pokemon = require('./pokemon')
 
 
-app.get('/poke', (req, res) => {
-  res.send('this is the server responding')
+app.get('/pokemon', (req, res) => {
+  res.send(pokemon)
 })
 
 
