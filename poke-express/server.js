@@ -1,13 +1,19 @@
 const express = require('express');
 const app = express();
-const pokemon = require('./pokemon')
+const Pokemon = require('./module/pokemon')
 
+const bodyParser = require('body-parser')
 
 app.get('/pokemon', (req, res) => {
   res.send(pokemon)
 })
 
 
+app.get('/pokemon/:index', (req, res) => {
+  res.render('show.ejs', {
+    poke: Pokemon[req.params.index]
+  });
+});
 
 
 
