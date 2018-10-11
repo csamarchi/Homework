@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Pokemon List</h1>
+
+      <% for (let i = 0; i < pokemon.length; i++) { %>
+        <ul>
+        <%=  pokemon[i].name %>
+        <img src="<%= pokemon[i].img %>" >
+
+    <a href="/pokemon/<%=i%>" Link to <%=pokemon[i].name%></a>
+
+
+</ul>
+<%  } %>
+
+  </body>
+</html>

@@ -1,19 +1,35 @@
 const express = require('express');
 const app = express();
 const Pokemon = require('./module/pokemon')
+const methodOverride = require('method-override');
 
 const bodyParser = require('body-parser')
 
-app.get('/pokemon', (req, res) => {
-  res.send(pokemon)
-})
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(methodOverride('_method'));
 
+
+
+app.get('/pokemon', (req, res) => {
+  res.render('index.ejs', {
+    pokemon: Pokemon
+  });
+});
 
 app.get('/pokemon/:index', (req, res) => {
   res.render('show.ejs', {
-    poke: Pokemon[req.params.index]
+    pokemon: Pokemon[req.params.index]
   });
 });
+
+
+
+
+
+
+
+
 
 
 
