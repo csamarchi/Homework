@@ -5,6 +5,11 @@
     <title></title>
   </head>
   <body>
-
+<h1>Pokemon Edit</h1>
+<form method="POST" action="/pokemon/<%=index%>?_method=PUT">
+  name: <input type="text" name="name" value="<%=pokemon.name%>"></br>
+  img: <input type="text" name="img" value="<%=pokemon.img%>"></br>
+<input type="submit" value="Submit">
+</form>
   </body>
 </html>
