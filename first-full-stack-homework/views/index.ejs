@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title></title>
+  <style>
+      li {font-family: roboto;}
+  </style>
 </head>
 
 <body>
@@ -19,13 +22,17 @@
       <%  } else { %>
           Cold
       <%  } %>
+      <form action="/food/<%=i%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete">
+      </form>
 
       </ul>
   <% } %>
 
     <nav>
-<a href="/food/new" Add another Food Item </a>
-
+<a href="/food/new">Add another Food Item </a>
     </nav>
+
+
   </body>
 </html>

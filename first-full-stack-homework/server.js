@@ -45,6 +45,13 @@ app.get('/food/:index', (req, res) => {
 })
 
 
+//delete route
+app.delete('/food/:index', (req, res) => {
+  Food.splice(req.params.index, 1);
+  res.redirect('/food');
+})
+
+
 
 
 
