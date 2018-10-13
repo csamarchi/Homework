@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <h1>Food Show Page</h1>
+  <%= food.name %> is
+  <%=food.cuisine%>
+
+  <% if(food.hot === true) {%>
+
+  <h2> It is hot /h2>
+
+    <% } else { %>
+
+    <h2> It is cold</h2>
+
+    <% } %>
+
+</body>
+
+</html>

@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
-const Food = require('./models/food.js');
+const Food = require('./models/food');
 
 //middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -20,6 +20,28 @@ app.get('/food', (req, res) => {
   });
 })
 
+app.post('/food', (req, res) => {
+  console.log(req.body, 'this is where our info will live')
+  res.send('we got food');
+})
+
+
+
+
+
+
+
+
+// create
+// app.post('/', (req, res) => {
+//   Food.create(req.body, (err, createdFood) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log(createdFood);
+//     }
+//   })
+// })
 
 
 
