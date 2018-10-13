@@ -9,10 +9,7 @@ const Food = require('./models/food');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
-// app.get('/food', (req, res) => {
-//   res.send(Food);
-// })
-
+//index route
 app.get('/food', (req, res) => {
   console.log(req.body, 'this is your body');
   res.render('index.ejs', {
@@ -20,10 +17,38 @@ app.get('/food', (req, res) => {
   });
 })
 
+//new route
+app.get('/food/new', (req, res) => {
+  res.render('new.ejs')
+})
+
+//post route
 app.post('/food', (req, res) => {
   console.log(req.body, 'this is where our info will live')
-  res.send('we got food');
+  if(req.body.hot === 'on') {
+    req.body.hot = true;
+  } else {
+    req.body.hot = false;
+  }
+  Food.push(req.body);
+  res.redirect('/food');
 })
+
+
+//show route
+app.get('/food/:index', (req, res) => {
+  res.render('show.ejs', {
+    food: Food[req.params.index],
+    index: req.params.index
+  })
+  res.redirect('/food')
+})
+
+
+
+
+
+
 
 
 

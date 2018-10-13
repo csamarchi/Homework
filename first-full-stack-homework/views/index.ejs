@@ -13,14 +13,19 @@
       <ul>
         <%=  food[i].name %> <br/>
         <%=     food[i].cuisine %> <br/>
-        <%=     food[i].hot %> <br/>
         <%=     food[i].calories %> <br/>
+      <%  if (food[i].hot === true) { %>
+          Hot
+      <%  } else { %>
+          Cold
+      <%  } %>
+
       </ul>
   <% } %>
 
+    <nav>
+<a href="/food/new" Add another Food Item </a>
 
-
-
-</body>
-
+    </nav>
+  </body>
 </html>
