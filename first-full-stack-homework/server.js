@@ -18,7 +18,9 @@ app.get('/food', (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render('index.ejs', {food: allFood});
+      res.render('index.ejs', {
+        food: allFood
+      });
     }
   })
 });
@@ -31,7 +33,7 @@ app.get('/food/new', (req, res) => {
 //post route
 app.post('/food', (req, res) => {
   console.log(req.body, 'this is where our info will live')
-  if(req.body.hot === 'on') {
+  if (req.body.hot === 'on') {
     req.body.hot = true;
   } else {
     req.body.hot = false;
@@ -51,7 +53,7 @@ app.post('/food', (req, res) => {
 app.get('/food/:index', (req, res) => {
   Food.findById(req.params.index, (err, foundFood) => {
     res.render('show.ejs', {
-    food: foundFood
+      food: foundFood
     })
   })
 });
@@ -79,12 +81,12 @@ app.get('/food/:index/edit', (req, res) => {
 
 //update route
 app.put('/food/:index', (req, res) => {
-  if(req.body.hot === 'on') {
+  if (req.body.hot === 'on') {
     req.body.hot = true;
   } else {
     req.body.hot = false;
   }
-  Food.findByIdAndUpdate(req.params.index, req.body, (err, updatedModel) =>{
+  Food.findByIdAndUpdate(req.params.index, req.body, (err, updatedModel) => {
     res.redirect('/food');
   })
 })
