@@ -49,11 +49,11 @@ app.post('/food', (req, res) => {
 
 //show route
 app.get('/food/:index', (req, res) => {
-  res.render('show.ejs', {
-    food: Food[req.params.index],
-    index: req.params.index
+  Food.findById(req.params.index, (err, foundFood) => {
+    res.render('show.ejs', {
+    food: foundFood
+    })
   })
-  res.redirect('/food')
 });
 
 //edit route
@@ -64,8 +64,8 @@ app.get('/food/:index/edit', (req, res) => {
 
   Food.findById(req.params.index, (err, foundFood) => {
     res.render('edit.ejs', {
-      food: Food[req.params.id],
-      id: foundFood.id
+      food: Food[req.params.index],
+      index: foundFood.index
     });
   // })
   });
@@ -94,28 +94,6 @@ app.put('/food/:index', (req, res) => {
   Food.findByIdAndRemove(req.params.index, req.body, (err, updatedModel))
   res.redirect('/food');
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

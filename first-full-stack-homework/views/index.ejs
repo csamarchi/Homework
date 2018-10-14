@@ -14,7 +14,7 @@
 
   <% for (let i = 0; i < food.length; i++ ) { %>
       <ul>
-      The <a href="/food/<%=food[i].index%>"> <%=food[i].name; %></a> is <%=food[i].cuisine; %>.
+      The <a href="/food/<%=food[i].id%>"> <%=food[i].name; %></a> is <%=food[i].cuisine; %>.
       It has <%=food[i].calories; %> calories.
       <%  if (food[i].hot === true) { %>
           It's hot
