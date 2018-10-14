@@ -14,16 +14,14 @@
 
   <% for (let i = 0; i < food.length; i++ ) { %>
       <ul>
-      The <a href="/food/<%=food.index%>"> <%=food[i].name; %></a> is <%=food[i].cuisine; %>
-        <!-- <%=  food[i].name %> <br/>
-        <%=     food[i].cuisine %> <br/>
-        <%=     food[i].calories %> <br/> -->
+      The <a href="/food/<%=food[i].index%>"> <%=food[i].name; %></a> is <%=food[i].cuisine; %>.
+      It has <%=food[i].calories; %> calories.
       <%  if (food[i].hot === true) { %>
-          Hot
+          It's hot
       <%  } else { %>
-          Cold
+          It's cold
       <%  } %>
-      <form action="/food/<%=food[i].index%>?_method=DELETE" method="POST">
+      <form action="/food/<%=food[i].id%>?_method=DELETE" method="POST">
         <input type="submit" value="delete">
       </form>
 

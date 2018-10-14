@@ -36,7 +36,6 @@ app.post('/food', (req, res) => {
   } else {
     req.body.hot = false;
   }
-
   Food.create(req.body, (err, createdFood) => {
     if (err) {
       console.log(err);
@@ -57,20 +56,33 @@ app.get('/food/:index', (req, res) => {
   res.redirect('/food')
 });
 
+//edit route
+app.get('/food/:index/edit', (req, res) => {
+  // res.render('edit.ejs', {
+  //   food: Food[req.params.index],
+  //   index: req.params.index
+
+  Food.findById(req.params.index, (err, foundFood) => {
+    res.render('edit.ejs', {
+      food: Food[req.params.id],
+      id: foundFood.id
+    });
+  // })
+  });
+});
+
 
 //delete route
 app.delete('/food/:index', (req, res) => {
-  Food.splice(req.params.index, 1);
-  res.redirect('/food');
-});
-
-//edit route
-app.get('/food/:index/edit', (req, res) => {
-  res.render('edit.ejs', {
-    food: Food[req.params.index],
-    index: req.params.index
+  Food.findByIdAndRemove(req.params.index, (err, foundFood) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect('/food');
+    }
   });
 });
+
 
 //update route
 app.put('/food/:index', (req, res) => {
@@ -79,7 +91,7 @@ app.put('/food/:index', (req, res) => {
   } else {
     req.body.hot = false;
   }
-  Food[req.params.index] = req.body;
+  Food.findByIdAndRemove(req.params.index, req.body, (err, updatedModel))
   res.redirect('/food');
 })
 
@@ -88,22 +100,6 @@ app.put('/food/:index', (req, res) => {
 
 
 
-
-
-
-
-
-
-// create
-// app.post('/', (req, res) => {
-//   Food.create(req.body, (err, createdFood) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log(createdFood);
-//     }
-//   })
-// })
 
 
 
