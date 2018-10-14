@@ -56,22 +56,6 @@ app.get('/food/:index', (req, res) => {
   })
 });
 
-//edit route
-app.get('/food/:index/edit', (req, res) => {
-  // res.render('edit.ejs', {
-  //   food: Food[req.params.index],
-  //   index: req.params.index
-
-  Food.findById(req.params.index, (err, foundFood) => {
-    res.render('edit.ejs', {
-      food: Food[req.params.index],
-      index: foundFood.index
-    });
-  // })
-  });
-});
-
-
 //delete route
 app.delete('/food/:index', (req, res) => {
   Food.findByIdAndRemove(req.params.index, (err, foundFood) => {
@@ -83,6 +67,15 @@ app.delete('/food/:index', (req, res) => {
   });
 });
 
+//edit route
+app.get('/food/:index/edit', (req, res) => {
+  Food.findById(req.params.index, (err, foundFood) => {
+    res.render('edit.ejs', {
+      food: foundFood
+    });
+  });
+});
+
 
 //update route
 app.put('/food/:index', (req, res) => {
@@ -91,8 +84,9 @@ app.put('/food/:index', (req, res) => {
   } else {
     req.body.hot = false;
   }
-  Food.findByIdAndRemove(req.params.index, req.body, (err, updatedModel))
-  res.redirect('/food');
+  Food.findByIdAndUpdate(req.params.index, req.body, (err, updatedModel) =>{
+    res.redirect('/food');
+  })
 })
 
 

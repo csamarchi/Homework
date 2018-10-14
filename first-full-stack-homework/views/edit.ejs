@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Edit Your Food</h1>
-    <form method="POST" action="/food/<%=food[i].index%>?_method=PUT">
+    <form method="POST" action="/food/<%=food.id%>?_method=PUT">
       Name: <input type="text" name="name" value="<%=food.name%>"><br/>
       Cuisine: <input type="text" name="cuisine" value="<%=food.cuisine%>"><br/>
       Calories: <input type="text" name="calories" value="<%=food.calories%>"><br/>
