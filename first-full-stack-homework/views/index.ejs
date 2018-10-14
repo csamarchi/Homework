@@ -14,19 +14,20 @@
 
   <% for (let i = 0; i < food.length; i++ ) { %>
       <ul>
-        <%=  food[i].name %> <br/>
+      The <a href="/food/<%=food.index%>"> <%=food[i].name; %></a> is <%=food[i].cuisine; %>
+        <!-- <%=  food[i].name %> <br/>
         <%=     food[i].cuisine %> <br/>
-        <%=     food[i].calories %> <br/>
+        <%=     food[i].calories %> <br/> -->
       <%  if (food[i].hot === true) { %>
           Hot
       <%  } else { %>
           Cold
       <%  } %>
-      <form action="/food/<%=i%>?_method=DELETE" method="POST">
+      <form action="/food/<%=food[i].index%>?_method=DELETE" method="POST">
         <input type="submit" value="delete">
       </form>
 
-      <a href="/food/<%=i%>/edit"> Edit <%=food[i].name%></a>
+      <a href="/food/<%=food[i].index%>/edit"> Edit <%=food[i].name%></a>
       </ul>
   <% } %>
 

@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-
 const Food = require('./models/food');
+
+//require database
+require('./db/db');
 
 //middleware
 app.use(bodyParser.urlencoded({extended: false}));
@@ -11,10 +13,14 @@ app.use(methodOverride('_method'));
 
 //index route
 app.get('/food', (req, res) => {
-  console.log(req.body, 'this is your body');
-  res.render('index.ejs', {
-    food: Food
-  });
+
+  Food.find({}, (err, allFood) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render('index.ejs', {food: allFood});
+    }
+  })
 });
 
 //new route
@@ -30,8 +36,15 @@ app.post('/food', (req, res) => {
   } else {
     req.body.hot = false;
   }
-  Food.push(req.body);
-  res.redirect('/food');
+
+  Food.create(req.body, (err, createdFood) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(createdFood);
+      res.redirect('/food');
+    }
+  });
 });
 
 
