@@ -15,12 +15,12 @@ app.get('/food', (req, res) => {
   res.render('index.ejs', {
     food: Food
   });
-})
+});
 
 //new route
 app.get('/food/new', (req, res) => {
   res.render('new.ejs')
-})
+});
 
 //post route
 app.post('/food', (req, res) => {
@@ -32,7 +32,7 @@ app.post('/food', (req, res) => {
   }
   Food.push(req.body);
   res.redirect('/food');
-})
+});
 
 
 //show route
@@ -42,16 +42,22 @@ app.get('/food/:index', (req, res) => {
     index: req.params.index
   })
   res.redirect('/food')
-})
+});
 
 
 //delete route
 app.delete('/food/:index', (req, res) => {
   Food.splice(req.params.index, 1);
   res.redirect('/food');
-})
+});
 
-
+//edit route
+app.get('/food/:index/edit', (req, res) => {
+  res.render('edit.ejs', {
+    food: Food[req.params.index],
+    index: req.params.index
+  });
+});
 
 
 

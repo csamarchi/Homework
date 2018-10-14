@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Your Food</h1>
+    <form>
+      Name: <input type="text" name="name" value="<%=food.name%>"><br/>
+      Cuisine: <input type="text" name="cuisine" value="<%=food.cuisine%>"><br/>
+      Calories: <input type="text" name="calories" value="<%=food.calories%>"><br/>
+      Hot:
+        <input type="checkbox" name="hot"
+          <% if (food.hot === true) { %>
+            checked
+          <%  } %>
+      />
+    </br>
+    <input type="submit" name="" value="Submit Changes"/>
+    </form>
+
+
+  </body>
+</html>
