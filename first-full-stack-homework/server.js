@@ -59,6 +59,17 @@ app.get('/food/:index/edit', (req, res) => {
   });
 });
 
+//update route
+app.put('/food/:index', (req, res) => {
+  if(req.body.hot === 'on') {
+    req.body.hot = true;
+  } else {
+    req.body.hot = false;
+  }
+  Food[req.params.index] = req.body;
+  res.redirect('/food');
+})
+
 
 
 
