@@ -9,8 +9,18 @@
     <nav>
       <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/new> Add your Info!"</a></li>
+        <li><a href="/user/new"> Add your Info!</a></li>
       </ul>
     </nav>
+    <ul>
+    <%  for (let i = 0; i < user.length; i++) { %>
+        <li>
+        <%=  user[i].username %>
+        <form action="/user/<%=user[i].id%>" method="GET">
+          <input type="submit" value="Show <%=user[i].username%> Page">
+        </form>
+        </li>
+    <%  } %>
+    </ul>
   </body>
 </html>
