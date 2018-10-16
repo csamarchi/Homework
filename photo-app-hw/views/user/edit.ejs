@@ -12,10 +12,11 @@
       </ul>
     </nav>
 <main>
-  <form action="/user" method="POST">
+  <h3>Edit Below</h3>
+  <form action="/user/<%=user.id%>?_method=PUT" method="POST">
     Username: <input type="text" name="username" value="">
     Password: <input type="text" name="password" value="">
-    <button type="button" name="update">Update</button>
+    <button type="submit">Update</button>
   </form>
 </main>
   </body>

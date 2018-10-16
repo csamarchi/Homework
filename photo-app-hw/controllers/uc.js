@@ -36,8 +36,8 @@ router.get('/:index', (req, res) => {
     res.render('user/show.ejs', {
       user: foundUser
     })
-  ])
-})
+  ]);
+});
 
 //edit route
 router.get('/:index/edit', (req, res) => {
@@ -45,13 +45,18 @@ router.get('/:index/edit', (req, res) => {
     res.render('user/edit.ejs', {
       user: foundUser
     })
-  })
-})
+  });
+});
 
 //update route
 router.put('/:index', (req, res) => {
   User.findByIdAndUpdate(req.params.index, req.body, (err, updateUser) => {
-    console.log(req.body, ' updated');
+    res.redirect('/user')
+  });
+});
+
+router.delete('/:index', (req, res) => {
+  User.findByIdAndRemove(req.params.index, (err, userFound) => {
     res.redirect('/user')
   })
 })
