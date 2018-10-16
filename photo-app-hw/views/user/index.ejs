@@ -15,9 +15,8 @@
     <ul>
     <%  for (let i = 0; i < user.length; i++) { %>
         <li>
-        <%=  user[i].username %>
         <form action="/user/<%=user[i].id%>" method="GET">
-          <input type="submit" value="Show <%=user[i].username%> Page">
+          <a href="/user/<%=user[i].id%>"><%=user[i].username%></a>
         </form>
         </li>
     <%  } %>

@@ -30,10 +30,31 @@ router.post('/', (req, res) => {
   });
 })
 
+//show route
+router.get('/:index', (req, res) => {
+  User.findById(req.params.index, (err, foundUser) => [
+    res.render('user/show.ejs', {
+      user: foundUser
+    })
+  ])
+})
 
+//edit route
+router.get('/:index/edit', (req, res) => {
+  User.findById(req.params.index, (err, foundUser) => {
+    res.render('user/edit.ejs', {
+      user: foundUser
+    })
+  })
+})
 
-
-
+//update route
+router.put('/:index', (req, res) => {
+  User.findByIdAndUpdate(req.params.index, req.body, (err, updateUser) => {
+    console.log(req.body, ' updated');
+    res.redirect('/user')
+  })
+})
 
 
 module.exports = router;

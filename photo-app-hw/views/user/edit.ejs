@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit <%=user.username%></h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+<main>
+  <form action="/user" method="POST">
+    Username: <input type="text" name="username" value="">
+    Password: <input type="text" name="password" value="">
+    <button type="button" name="update">Update</button>
+  </form>
+</main>
+  </body>
+</html>
