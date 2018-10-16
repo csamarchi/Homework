@@ -55,6 +55,7 @@ router.put('/:index', (req, res) => {
   });
 });
 
+//delete route
 router.delete('/:index', (req, res) => {
   User.findByIdAndRemove(req.params.index, (err, userFound) => {
     res.redirect('/user')
