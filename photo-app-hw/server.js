@@ -10,7 +10,7 @@ const userController = require('./controllers/uc');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
-app.use('/uc', userController);
+app.use('/user', userController);
 
 
 app.get('/', (req, res) => {
