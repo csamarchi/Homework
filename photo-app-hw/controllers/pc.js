@@ -36,7 +36,29 @@ router.get('/:index', (req, res) => {
   });
 });
 
+//delete route
+router.delete('/:index', (req, res) => {
+  Photo.findByIdAndRemove(req.params.index, (err, photoFound) => {
+    res.redirect('/photo')
+  })
+})
 
+//edit route
+router.get('/:index/edit', (req, res) => {
+  console.log(req.params.index);
+  Photo.findById(req.params.index, (err, foundPhoto) => {
+    res.render('photo/edit.ejs', {
+      photo: foundPhoto
+    });
+  });
+});
+
+//update route
+router.put('/:index', (req, res) => {
+  Photo.findByIdAndUpdate(req.params.index, req.body, (err, updatePhoto) => {
+    res.redirect('/photo')
+  });
+});
 
 
 
