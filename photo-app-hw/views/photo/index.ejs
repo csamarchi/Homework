@@ -6,6 +6,7 @@
   </head>
   <body>
     <h1>Photo Drop</h1>
+    <%= photo.name %>
     <nav>
       <ul>
         <li><a href="/photo/new">New Post</a></li>
@@ -14,5 +15,15 @@
 
       </ul>
     </nav>
+    <ul>
+      <%  for (let i = 0; i < photo.length; i++) { %>
+          <li>
+            <%= photo.username %>
+          <form action="/photo/<%=photo[i].id%>" method="GET">
+            <a href="/photo/<%=photo[i].id%>"><%=photo[i].username%></a>
+          </form>
+          </li>
+      <%  } %>
+    </ul>
   </body>
 </html>
