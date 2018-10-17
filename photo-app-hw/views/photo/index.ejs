@@ -19,6 +19,7 @@
       <%  for (let i = 0; i < photo.length; i++) { %>
           <li>
             <%= photo.username %>
+            <img src="<%=photo[i].img%>" alt="">
           <form action="/photo/<%=photo[i].id%>" method="GET">
             <a href="/photo/<%=photo[i].id%>"><%=photo[i].username%></a>
           </form>
