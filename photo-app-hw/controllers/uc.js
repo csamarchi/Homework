@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
-const express = require('express');
-const router = express.Router();
+const express  = require('express');
+const router   = express.Router();
+const User     = require('../models/user');
 
-const User = require('../models/user');
+const Photo    = require('../models/photo');
 
 //index route
 router.get('/', (req, res) => {
@@ -13,21 +14,46 @@ router.get('/', (req, res) => {
   });
 });
 
+//link photo route
+router.get('/:index/photo', (req, res) => {
+  User.findById(req.params.index, (err, userFound) => {
+    photo.find({}, (err, photoFound) => {
+      res.render('./user/showP.ejs', {
+        user: userFound,
+        photo: photoFound
+      })
+    })
+  })
+})
+
+
 //new route
 router.get('/new', (req, res) => {
-  res.render('./user/new.ejs');
+  Photo.find({}, (err, allPhoto) => {
+    res.render('./user/new.ejs', {
+      photo: allPhoto
+    });
+  });
 })
 
 //post route
 router.post('/', (req, res) => {
-  User.create(req.body, (err, createdUser) => {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log(createdUser);
-      res.redirect('/user')
-    }
-  });
+  Photo.findById(req.body.photoId, (err, foundPhoto) => {
+    User.create(req.body, (err, createdUser) => {
+      foundPhoto.user.push(createdUser);
+      found.save((err, data) => {
+        res.redirect('/user')
+      })
+    })
+  })
+  // User.create(req.body, (err, createdUser) => {
+  //   if(err) {
+  //     console.log(err);
+  //   } else {
+  //     console.log(createdUser);
+  //     res.redirect('/user')
+  //   }
+  // });
 })
 
 //show route

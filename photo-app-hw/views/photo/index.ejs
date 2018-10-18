@@ -10,6 +10,8 @@
     <nav>
       <ul>
         <li><a href="/photo/new">New Post</a></li>
+        <li><a href="/">Home</a></li>
+
         <!-- <li><a href="">All Contributers</a></li>
         <li><a href="">All Submissions</a></li> -->
 
@@ -18,11 +20,12 @@
     <ul>
       <%  for (let i = 0; i < photo.length; i++) { %>
           <li>
-            <%= photo.username %>
-            <img src="<%=photo[i].img%>" alt="">
+            <%= photo.username %> </br>
           <form action="/photo/<%=photo[i].id%>" method="GET">
             <a href="/photo/<%=photo[i].id%>"><%=photo[i].username%></a>
           </form>
+          <img src="<%=photo[i].img%>" alt="">
+
           </li>
       <%  } %>
     </ul>

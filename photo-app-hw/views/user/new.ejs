@@ -13,8 +13,16 @@
     </nav>
     <main>
       <form action="/user" method="POST">
-        username: <input type="text" name="username"><br/>
-        password: <input type="text" name="password"><br/>
+        <label>Photos</label>
+        <br/>
+        <select name="photoId">
+        <%  for (let i = 0; i < photo.length; i++) { %>
+            <option value="<%=photo[i].id%>"><%=photo[i].username%></option>
+        <%  } %>
+        </select>
+        <br/>
+        username: <br/> <input type="text" name="username"><br/>
+        password: <br/> <input type="text" name="password"><br/>
         <button type="submit" name="button">Create User</button></br>
       </form>
     </main>

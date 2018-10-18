@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <h1><%=photo.name%></h1>
+    <h1> <%=photo.username%>'s Photos</h1>
     <img src="<%=photo.img%>" alt="">
 
     <nav>
@@ -13,6 +13,7 @@
         <li><a href="/">Home</a></li>
         <li><a href="/photo">Back to Photo Index</a></li>
         <li><a href="/photo/<%=photo.id%>/edit">Edit Photo</a></li>
+        <li><a href="/photo/new">Add another</a></li>
       </ul>
     </nav>
     <form action="/photo/<%=photo.id%>?_method=DELETE" method="POST">

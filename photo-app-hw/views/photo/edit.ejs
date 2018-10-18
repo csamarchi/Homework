@@ -13,10 +13,10 @@
     </nav>
     <img src="<%=photo.img%>" alt="">
 
-    <form action="/photo" method="POST">
+    <form action="/photo/<%=photo.id%>?_method=PUT" method="POST">
     img </br> <input type="text" name="img"></br>
     about the photo </br> <input type="text" name="about"></br>
-    <input type="submit" value="Create Post">
+    <button type="submit">Update</button>
     </form>
 
     <form action="/photo/<%=photo.id%>?_method=DELETE" method="POST">
